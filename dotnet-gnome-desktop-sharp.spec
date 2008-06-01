@@ -1,13 +1,12 @@
-# TODO: fix descriptions and summary (copied from dotnet-gnome-sharp)
 #
 %include	/usr/lib/rpm/macros.mono
 %include	/usr/lib/rpm/macros.perl
 #
-Summary:	.NET language bindings for GNOME
-Summary(pl.UTF-8):	Wiązania GNOME dla .NET
+Summary:	.NET language bindings for some of the GNOME desktop libraries
+Summary(pl.UTF-8):	Wiązania niektórych bibliotek z GNOME desktop dla .NET
 Name:		dotnet-gnome-desktop-sharp
 Version:	2.20.1
-Release:	0.3
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-desktop-sharp/2.20/gnome-desktop-sharp-%{version}.tar.bz2
@@ -32,36 +31,36 @@ BuildRequires:	vte-devel >= 0.16.9
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This package provides bindings for .NET to GNOME libraries.
+This package provides .NET bindings for some of the GNOME desktop libraries.
 
 %description -l pl.UTF-8
-Pakiet ten dostarcza wiązania dla .NET do bibliotek z GNOME.
+Pakiet ten dostarcza wiązania niektórych bibliotek z GNOME desktop dla .NET.
 
 %package devel
-Summary:	Development part of GNOME#
-Summary(pl.UTF-8):	Część dla programistów GNOME#
+Summary:	Development part of GNOMEDesktop#
+Summary(pl.UTF-8):	Część dla programistów GNOMEDesktop#
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Tools (C source parser and C# code generator) and documentation for
-developing applications using GNOME#.
+developing applications using GNOMEDesktop#.
 
 %description devel -l pl.UTF-8
 Narzędzia (parser kodu C oraz generator kodu C#) i dokumentacja
-potrzebne przy tworzeniu aplikacji korzystających z GNOME#.
+potrzebne przy tworzeniu aplikacji korzystających z GNOMEDesktop#.
 
 %package static
-Summary:	Static gtk-sharp libraries
-Summary(pl.UTF-8):	Biblioteki statyczne gtk-sharp
+Summary:	Static GNOMEDesktop# libraries
+Summary(pl.UTF-8):	Biblioteki statyczne GNOMEDesktop#
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
-Static gnome-sharp libraries.
+Static GNOMEDesktop# libraries.
 
 %description static -l pl.UTF-8
-Biblioteki statyczne gnome-sharp.
+Biblioteki statyczne GNOMEDesktop#.
 
 %prep
 %setup -q -n gnome-desktop-sharp-%{version}
