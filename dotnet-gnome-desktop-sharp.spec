@@ -3,7 +3,7 @@
 %include	/usr/lib/rpm/macros.perl
 #
 Summary:	.NET language bindings for some of the GNOME desktop libraries
-Summary(pl.UTF-8):	Wiązania niektórych bibliotek z GNOME desktop dla .NET
+Summary(pl.UTF-8):	Wiązania niektórych bibliotek GNOME desktop dla .NET
 Name:		dotnet-gnome-desktop-sharp
 Version:	2.20.1
 Release:	1
@@ -31,10 +31,12 @@ BuildRequires:	vte-devel >= 0.16.9
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This package provides .NET bindings for some of the GNOME desktop libraries.
+This package provides .NET bindings for some of the GNOME desktop
+libraries.
 
 %description -l pl.UTF-8
-Pakiet ten dostarcza wiązania niektórych bibliotek z GNOME desktop dla .NET.
+Pakiet ten dostarcza wiązania niektórych bibliotek GNOME desktop dla
+.NET.
 
 %package devel
 Summary:	Development part of GNOMEDesktop#
@@ -101,21 +103,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%{_pkgconfigdir}/gnome-desktop-sharp-2.0.pc
-%{_pkgconfigdir}/gtkhtml-sharp-3.14.pc
-%{_pkgconfigdir}/gtksourceview2-sharp.pc
-%{_pkgconfigdir}/nautilusburn-sharp.pc
-%{_pkgconfigdir}/rsvg2-sharp-2.0.pc
-%{_pkgconfigdir}/vte-sharp-0.16.pc
-%{_pkgconfigdir}/wnck-sharp-1.0.pc
-
-%{_datadir}/gnomedesktop-sharp
-%{_datadir}/gtkhtml-sharp
-%{_datadir}/gtksourceview2-sharp
-%{_datadir}/nautilusburn-sharp
-%{_datadir}/rsvg2-sharp
-%{_datadir}/vte-sharp
-%{_datadir}/wnck-sharp
 %{_prefix}/lib/mono/gnomedesktop-sharp-2.20
 %{_prefix}/lib/mono/gtkhtml-sharp-3.14
 %{_prefix}/lib/mono/gtksourceview2-sharp-2.0
@@ -123,6 +110,20 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/lib/mono/rsvg2-sharp-2.0
 %{_prefix}/lib/mono/vte-sharp-0.16
 %{_prefix}/lib/mono/wnck-sharp-2.20
+%{_datadir}/gnomedesktop-sharp
+%{_datadir}/gtkhtml-sharp
+%{_datadir}/gtksourceview2-sharp
+%{_datadir}/nautilusburn-sharp
+%{_datadir}/rsvg2-sharp
+%{_datadir}/vte-sharp
+%{_datadir}/wnck-sharp
+%{_pkgconfigdir}/gnome-desktop-sharp-2.0.pc
+%{_pkgconfigdir}/gtkhtml-sharp-3.14.pc
+%{_pkgconfigdir}/gtksourceview2-sharp.pc
+%{_pkgconfigdir}/nautilusburn-sharp.pc
+%{_pkgconfigdir}/rsvg2-sharp-2.0.pc
+%{_pkgconfigdir}/vte-sharp-0.16.pc
+%{_pkgconfigdir}/wnck-sharp-1.0.pc
 
 %files static
 %defattr(644,root,root,755)
