@@ -5,16 +5,16 @@
 Summary:	.NET language bindings for some of the GNOME desktop libraries
 Summary(pl.UTF-8):	Wiązania niektórych bibliotek GNOME desktop dla .NET
 Name:		dotnet-gnome-desktop-sharp
-Version:	2.24.0
+Version:	2.26.0
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-desktop-sharp/2.24/gnome-desktop-sharp-%{version}.tar.bz2
-# Source0-md5:	2d36f04223a52e09908ddbdc1c767f5e
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-desktop-sharp/2.26/gnome-desktop-sharp-%{version}.tar.bz2
+# Source0-md5:	4bc990900bb318b2ba0b0e7998bb47d1
 URL:		http://gtk-sharp.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	dotnet-gnome-sharp-devel >= 2.24.0
+BuildRequires:	dotnet-gnome-sharp-devel >= 2.24.1
 BuildRequires:	dotnet-gtk-sharp2-devel >= 2.12.2
 BuildRequires:	gnome-panel-devel >= 2.24.0
 BuildRequires:	gtk+2-devel >= 2:2.14.0
