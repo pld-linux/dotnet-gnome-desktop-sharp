@@ -1,4 +1,5 @@
 #
+%define	gnome_version	2.25.0
 %include	/usr/lib/rpm/macros.mono
 %include	/usr/lib/rpm/macros.perl
 #
@@ -16,14 +17,15 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dotnet-gnome-sharp-devel >= 2.24.1
 BuildRequires:	dotnet-gtk-sharp2-devel >= 2.12.2
-BuildRequires:	gnome-panel-devel >= 2.24.0
+BuildRequires:	gnome-desktop-devel >= %{gnome_version}
+BuildRequires:	gnome-panel-devel >= %{gnome_version}
 BuildRequires:	gtk+2-devel >= 2:2.14.0
 BuildRequires:	gtkhtml-devel >= 3.24.0
 BuildRequires:	gtksourceview2-devel >= 2.2.2
 BuildRequires:	libgnomeprintui-devel >= 2.18.0
 BuildRequires:	librsvg-devel >= 2.22.2
 BuildRequires:	libtool
-BuildRequires:	libwnck-devel >= 2.24.0
+BuildRequires:	libwnck-devel >= %{gnome_version}
 BuildRequires:	mono-csharp >= 1.1.16.1
 BuildRequires:	monodoc >= 1.1.16
 BuildRequires:	nautilus-cd-burner-devel >= 2.24.0
