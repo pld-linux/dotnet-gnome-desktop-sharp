@@ -34,6 +34,7 @@ BuildRequires:	rpm-perlprov
 BuildRequires:	rpmbuild(monoautodeps)
 BuildRequires:	vte-devel >= 0.16.14
 BuildConflicts:	nautilus-cd-burner-devel
+Requires:	gnome-desktop-libs >= 2.30
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
