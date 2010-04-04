@@ -7,7 +7,7 @@ Summary:	.NET language bindings for some of the GNOME desktop libraries
 Summary(pl.UTF-8):	Wiązania niektórych bibliotek GNOME desktop dla .NET
 Name:		dotnet-gnome-desktop-sharp
 Version:	2.26.0
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-desktop-sharp/2.26/gnome-desktop-sharp-%{version}.tar.bz2
@@ -28,11 +28,11 @@ BuildRequires:	libtool
 BuildRequires:	libwnck-devel >= %{gnome_version}
 BuildRequires:	mono-csharp >= 1.1.16.1
 BuildRequires:	monodoc >= 1.1.16
-BuildRequires:	nautilus-cd-burner-devel >= 2.24.0
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-perlprov
 BuildRequires:	rpmbuild(monoautodeps)
 BuildRequires:	vte-devel >= 0.16.14
+BuildConflicts:	nautilus-cd-burner-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -101,13 +101,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libgnomepanelsharpglue-2.so
 %attr(755,root,root) %{_libdir}/libgtkhtmlsharpglue-2.so
 %attr(755,root,root) %{_libdir}/libgtksourceview2sharpglue-2.so
-%attr(755,root,root) %{_libdir}/libnautilusburnsharpglue-2.so
 %attr(755,root,root) %{_libdir}/libwncksharpglue-2.so
 %attr(755,root,root) %{_libdir}/libvtesharpglue-2.so
 %{_libdir}/libgnomepanelsharpglue-2.la
 %{_libdir}/libgtkhtmlsharpglue-2.la
 %{_libdir}/libgtksourceview2sharpglue-2.la
-%{_libdir}/libnautilusburnsharpglue-2.la
 %{_libdir}/libwncksharpglue-2.la
 %{_libdir}/libvtesharpglue-2.la
 %{_prefix}/lib/mono/gac/gnome-panel-sharp
@@ -115,7 +113,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/lib/mono/gac/gnomedesktop-sharp
 %{_prefix}/lib/mono/gac/gtkhtml-sharp
 %{_prefix}/lib/mono/gac/gtksourceview2-sharp
-%{_prefix}/lib/mono/gac/nautilusburn-sharp
 %{_prefix}/lib/mono/gac/rsvg2-sharp
 %{_prefix}/lib/mono/gac/vte-sharp
 %{_prefix}/lib/mono/gac/wnck-sharp
@@ -127,7 +124,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/lib/mono/gnomedesktop-sharp-2.20
 %{_prefix}/lib/mono/gtkhtml-sharp-3.14
 %{_prefix}/lib/mono/gtksourceview2-sharp-2.0
-%{_prefix}/lib/mono/nautilusburn-sharp-2.20
 %{_prefix}/lib/mono/rsvg2-sharp-2.0
 %{_prefix}/lib/mono/vte-sharp-0.16
 %{_prefix}/lib/mono/wnck-sharp-2.20
@@ -136,7 +132,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnomedesktop-sharp
 %{_datadir}/gtkhtml-sharp
 %{_datadir}/gtksourceview2-sharp
-%{_datadir}/nautilusburn-sharp
 %{_datadir}/rsvg2-sharp
 %{_datadir}/vte-sharp
 %{_datadir}/wnck-sharp
@@ -145,7 +140,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_pkgconfigdir}/gnome-print-sharp-2.18.pc
 %{_pkgconfigdir}/gtkhtml-sharp-3.14.pc
 %{_pkgconfigdir}/gtksourceview2-sharp.pc
-%{_pkgconfigdir}/nautilusburn-sharp.pc
 %{_pkgconfigdir}/rsvg2-sharp-2.0.pc
 %{_pkgconfigdir}/vte-sharp-0.16.pc
 %{_pkgconfigdir}/wnck-sharp-1.0.pc
@@ -155,6 +149,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libgnomepanelsharpglue-2.a
 %{_libdir}/libgtkhtmlsharpglue-2.a
 %{_libdir}/libgtksourceview2sharpglue-2.a
-%{_libdir}/libnautilusburnsharpglue-2.a
 %{_libdir}/libwncksharpglue-2.a
 %{_libdir}/libvtesharpglue-2.a
