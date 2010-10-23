@@ -7,7 +7,7 @@ Summary:	.NET language bindings for some of the GNOME desktop libraries
 Summary(pl.UTF-8):	Wiązania niektórych bibliotek GNOME desktop dla .NET
 Name:		dotnet-gnome-desktop-sharp
 Version:	2.26.0
-Release:	3
+Release:	4
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-desktop-sharp/2.26/gnome-desktop-sharp-%{version}.tar.bz2
