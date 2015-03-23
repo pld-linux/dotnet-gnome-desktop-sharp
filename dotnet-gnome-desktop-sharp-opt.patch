@@ -1,0 +1,11 @@
+--- gnome-desktop-sharp-2.26.0/configure.in.orig	2009-03-02 16:22:58.000000000 +0100
++++ gnome-desktop-sharp-2.26.0/configure.in	2015-03-01 21:31:16.800906525 +0100
+@@ -49,7 +49,7 @@
+ # not 64 bit clean in cross-compile
+ AC_CHECK_SIZEOF(void *, 4)
+ 
+-CFLAGS='-g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings'
++CFLAGS="$CFLAGS -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes  -Wmissing-prototypes -Wnested-externs  -Wshadow -Wpointer-arith -Wno-cast-qual -Wcast-align -Wwrite-strings"
+ 
+ if test "x$enable_maintainer_mode" = "xyes"; then
+ DEBUG_FLAGS='-debug'
