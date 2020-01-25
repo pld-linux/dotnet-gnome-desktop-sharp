@@ -13,8 +13,6 @@
 %define	nautilusburn_ver	2.22.1
 %define	vte_ver			0.16.14
 
-%include	/usr/lib/rpm/macros.mono
-%include	/usr/lib/rpm/macros.perl
 Summary:	GnomeDesktop# - .NET binding for GNOME Desktop library
 Summary(pl.UTF-8):	GnomeDesktop# - wiązanie .NET do biblioteki GNOME Desktop
 Name:		dotnet-gnome-desktop-sharp
