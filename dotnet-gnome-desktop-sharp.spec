@@ -20,11 +20,11 @@ Version:	2.26.0
 Release:	7
 License:	LGPL v2.1
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-desktop-sharp/2.26/gnome-desktop-sharp-%{version}.tar.bz2
+Source0:	https://download.gnome.org/sources/gnome-desktop-sharp/2.26/gnome-desktop-sharp-%{version}.tar.bz2
 # Source0-md5:	4bc990900bb318b2ba0b0e7998bb47d1
 Patch0:		gnome-desktop-soname.patch
 Patch1:		%{name}-opt.patch
-URL:		http://gtk-sharp.sourceforge.net/
+URL:		https://www.mono-project.com/GtkSharp/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dotnet-gnome-sharp-devel >= %{gnomesharp_ver}
@@ -46,7 +46,7 @@ BuildRequires:	monodoc >= 1.1.16
 %{?with_nautilusburn:BuildRequires:	nautilus-cd-burner-devel >= %{nautilusburn_ver}}
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-perlprov
-BuildRequires:	rpmbuild(monoautodeps)
+BuildRequires:	rpmbuild(macros) >= 2.015
 BuildRequires:	vte0-devel >= %{vte_ver}
 %{!?with_nautilusburn:BuildConflicts:	nautilus-cd-burner-devel}
 Requires:	gnome-desktop2 >= 2.30
@@ -118,7 +118,7 @@ Summary:	Static GnomePanel# glue library
 Summary(pl.UTF-8):	Statyczna biblioteka sklejająca GnomePanel#
 Group:		Development/Libraries
 Requires:	dotnet-gnome-panel-sharp-devel = %{version}-%{release}
-Obsoletes:	dotnet-gnome-desktop-sharp-static
+Obsoletes:	dotnet-gnome-desktop-sharp-static < 2.26.0-7
 
 %description -n dotnet-gnome-panel-sharp-static
 Static GnomePanel# glue library.
@@ -187,7 +187,7 @@ Summary:	Static Gtkhtml# glue library
 Summary(pl.UTF-8):	Statyczna biblioteka sklejająca Gtkhtml#
 Group:		Development/Libraries
 Requires:	dotnet-gtkhtml-sharp-devel = %{version}-%{release}
-Obsoletes:	dotnet-gnome-desktop-sharp-static
+Obsoletes:	dotnet-gnome-desktop-sharp-static < 2.26.0-7
 
 %description -n dotnet-gtkhtml-sharp-static
 Static Gtkhtml# glue library.
@@ -227,7 +227,7 @@ Summary:	Static GtkSourceView# glue library
 Summary(pl.UTF-8):	Statyczna biblioteka sklejająca GtkSourceView#
 Group:		Development/Libraries
 Requires:	dotnet-gtksourceview2-sharp-devel = %{version}-%{release}
-Obsoletes:	dotnet-gnome-desktop-sharp-static
+Obsoletes:	dotnet-gnome-desktop-sharp-static < 2.26.0-7
 
 %description -n dotnet-gtksourceview2-sharp-static
 Static GtkSourceView# glue library.
@@ -265,7 +265,7 @@ Summary:	Static NautilusBurn# glue library
 Summary(pl.UTF-8):	Statyczna biblioteka sklejająca NautilusBurn#
 Group:		Development/Libraries
 Requires:	dotnet-nautilusburn-sharp-devel = %{version}-%{release}
-Obsoletes:	dotnet-gnome-desktop-sharp-static
+Obsoletes:	dotnet-gnome-desktop-sharp-static < 2.26.0-7
 
 %description -n dotnet-nautilusburn-sharp-static
 Static NautilusBurn# glue library.
@@ -330,7 +330,7 @@ Summary:	Static Vte# glue library
 Summary(pl.UTF-8):	Statyczna biblioteka sklejająca Vte#
 Group:		Development/Libraries
 Requires:	dotnet-vte-sharp-devel = %{version}-%{release}
-Obsoletes:	dotnet-gnome-desktop-sharp-static
+Obsoletes:	dotnet-gnome-desktop-sharp-static < 2.26.0-7
 
 %description -n dotnet-vte-sharp-static
 Static Vte# glue library.
@@ -370,7 +370,7 @@ Summary:	Static Wnck# glue library
 Summary(pl.UTF-8):	Statyczna biblioteka sklejająca Wnck#
 Group:		Development/Libraries
 Requires:	dotnet-wnck-sharp-devel = %{version}-%{release}
-Obsoletes:	dotnet-gnome-desktop-sharp-static
+Obsoletes:	dotnet-gnome-desktop-sharp-static < 2.26.0-7
 
 %description -n dotnet-wnck-sharp-static
 Static Wnck# glue library.
