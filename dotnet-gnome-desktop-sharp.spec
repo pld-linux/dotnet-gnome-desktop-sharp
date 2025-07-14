@@ -380,8 +380,8 @@ Statyczna biblioteka sklejająca Wnck#.
 
 %prep
 %setup -q -n gnome-desktop-sharp-%{version}
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 %build
 %{__libtoolize}
